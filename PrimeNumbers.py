@@ -17,7 +17,7 @@ for x in num_list:
     if x >= num2check:
         break
     elif num2check % x == 0:
-        result = "Number is diviseable!"
+        result = "Number is not a prime number!"
         break
     else:
         result = "%d is a prime number!" % num2check
