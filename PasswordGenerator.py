@@ -3,6 +3,11 @@ import random
 # Password generator
 
 
+def addword():
+    wordlist = list(("Apple", "Banana", "Cherry", "Dates", "Elephant", "Fungus", "Grape", "Hash", "Indo", "Jeffry", "Koko", "Lemon", "Mango", "Nana", "Orange", "Pair", "Quite", "Resin", "Salt", "Table", "Ubuntu", "Valve", "Wine", "Xamarin", "Yarn", "Zelda"))
+    return random.choice(wordlist)
+
+
 def addchars():
     method = random.randint(1, 4)
     output = ""
@@ -22,8 +27,7 @@ def addchars():
 def generatepassword(val):
     output = ""
     if val == "W":
-        while len(output) < 9:
-            output += addchars()
+        output = addword() + addword()
     elif val == "M":
         while len(output) < 13:
             output += addchars()
@@ -35,8 +39,9 @@ def generatepassword(val):
     return output
 
 
-strength = raw_input("Choose your password strength - (W)eak /(M)edium / (S)trong : ")
-password = generatepassword(strength)
-
-print "\n"+password+"\n"
-raw_input("Press any key to close")
+app = "reset"
+while app == "reset":
+    strength = raw_input("Choose your password strength - (W)eak /(M)edium / (S)trong : ")
+    print generatepassword(strength)
+    app = ""
+    app = raw_input("Press the enter key to close or type 'reset' to try again...")
