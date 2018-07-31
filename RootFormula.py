@@ -1,14 +1,14 @@
 import math
 
 print "Please type in your coefficients: "
-a = input("First coefficient: ")
-b = input("Second coefficient: ")
-c = input("Third coefficient: ")
-print "a: %d b: %d c: %d" % (a, b, c)
+firstCoeff = input("First coefficient: ")
+secondCoeff = input("Second coefficient: ")
+thirdCoeff = input("Third coefficient: ")
+print "a: %d b: %d c: %d" % (firstCoeff, secondCoeff, thirdCoeff)
 
-root = math.sqrt((b**2)-(4*a*c))
-x1 = (-b+root)/(2*a)
-x2 = (-b-root)/(2*a)
+root = math.sqrt((secondCoeff**2)-(4*firstCoeff*thirdCoeff))
+x1 = (-secondCoeff+root)/(2*firstCoeff)
+x2 = (-secondCoeff-root)/(2*firstCoeff)
 
 if x1 != x2:
     print "The answers are: (x1, x2) (%.2f , %.2f)" % (x1, x2)
