@@ -1,6 +1,6 @@
 import math
 
-print "Please type in your mekadmim: "
+print "Please type in your coefficients: "
 a = input("First coefficient: ")
 b = input("Second coefficient: ")
 c = input("Third coefficient: ")
@@ -15,5 +15,5 @@ if x1 != x2:
 elif x1 == x2:
     print "The answer is: x = %.2f" % x1
 else:
-    "Something went wrong. Please try again.\n"
-input("Press the Enter key to close this window.")
+    print("Something went wrong. Please try again.\n")
+mainLoop = raw_input("Press the Enter key to close this window.")
