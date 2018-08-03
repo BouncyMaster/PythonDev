@@ -1,5 +1,3 @@
-import random
-
 # Divisors
 
 num_list = []
@@ -12,7 +10,7 @@ def load_list():
 
 load_list()
 result = ""
-num2check = input("Please enter a number to check for divisors: ")
+num2check = int(input("Please enter a number to check for divisors: "))
 for x in num_list:
     if x >= num2check:
         break
