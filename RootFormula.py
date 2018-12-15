@@ -6,9 +6,10 @@ secondCoeff = int(input("Second coefficient: "))
 thirdCoeff = int(input("Third coefficient: "))
 print("a: %d b: %d c: %d" % (firstCoeff, secondCoeff, thirdCoeff))
 
-root = math.sqrt((secondCoeff**2)-(4*firstCoeff*thirdCoeff))
-x1 = (-secondCoeff+root)/(2*firstCoeff)
-x2 = (-secondCoeff-root)/(2*firstCoeff)
+root = math.sqrt((secondCoeff**2) - (4 * firstCoeff * thirdCoeff))
+x1 = (-secondCoeff + root) / (2 * firstCoeff)
+x2 = (-secondCoeff - root) / (2 * firstCoeff)
+
 
 if x1 != x2:
     print("The answers are: (x1, x2) (%.2f , %.2f)" % (x1, x2))
