@@ -4,8 +4,11 @@ import random
 
 
 def addword():
-    wordlist = list(("Apple", "Banana", "Cherry", "Dates", "Elephant", "Fungus", "Grape", "Hash", "Indo", "Jeffry", "Koko", "Lemon",
-                     "Mango", "Nana", "Orange", "Pair", "Quite", "Resin", "Salt", "Table", "Ubuntu", "Valve", "Wine", "Xamarin", "Yarn", "Zelda"))
+    wordlist = list(("Apple", "Banana", "Cherry", "Dates", "Elephant",
+                     "Fungus", "Grape", "Hash", "Indo", "Jeffry", "Koko",
+                     "Lemon", "Mango", "Nana", "Orange", "Pair", "Quite",
+                     "Resin", "Salt", "Table", "Ubuntu", "Valve", "Wine",
+                     "Xamarin", "Yarn", "Zelda"))
     return random.choice(wordlist)
 
 
@@ -13,7 +16,7 @@ def addchars():
     method = random.randint(1, 4)
     output = ""
     if method == 1:
-        output += random.choice('!@#$^&*/\/')
+        output += random.choice(r'!@#$^&*/\/')
     elif method == 2:
         output += random.choice('abcdefghijklmnopqrstuvwxyz')
     elif method == 3:
@@ -43,7 +46,8 @@ def generatepassword(val):
 app = "reset"
 while app == "reset":
     strength = input(
-        "Choose your password strength - (W)eak /(M)edium / (S)trong : ").lower()
+        "Choose your password strength - (W)eak "
+        "/(M)edium / (S)trong : ").lower()
     print(generatepassword(strength))
     app = ""
     app = input(
